@@ -14,6 +14,10 @@ Technical constraints:
 - Standalone functionality -- We can't assume the children will have access to a computer at home.
 - No on-site soldering / assembling / tools should be needed -- We assume these will not be available.
 
+Levels:
+1) Preprogrammed functions / games
+2) Scratch for Arduino programming at library
+
 Hardware:
 - 1 x Arduino Nano clone
 - 1 x mini breadboard
@@ -26,10 +30,13 @@ Hardware:
 
 Software functionality:
 - Resistance sensor -- detects resistance between pins, and sends output to corresponding pin. Similar function to the excellent Makey Makey.
-- "Zero" -- Detects state of pins and records them for reference -- onboard reset(?)
-- Simon -- Game where player mimics the blinked pattern
-- Collaborate -- Hook up multiple kits together
+- Zero -- Detects state of pins and records them for reference -- onboard reset(?)
+- Blink -- One output pin just blinks an LED or buzzer
+- Momentary -- Light turns on when button is pressed, turns off when released
+- Toggle -- Pressing button toggles light.
+- Simon -- Game where player mimics the blinked pattern.
+- Gopher chase -- Hook multiple kits together, a lit LED will chase around the kits. Pressing the corresponding button when lit catches it, otherwise, gopher speeds up or reverses.
 
 PCB design (optional):
 - Small piano keys -- To play with music and electrical resistance
-- Trace maze -- for dexterity practice and teaching electrical conductivity
+- Trace maze -- For dexterity practice and teaching electrical conductivity
