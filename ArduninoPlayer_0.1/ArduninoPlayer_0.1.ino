@@ -45,7 +45,7 @@ int resistance2State = 0;
 int resistance2Read = 0;
 int lastResistance2Read = 0;
 unsigned long Resistance2Hold = 0;
-int resistanceBounceThreshold = 40; // How much fluctuation in the analog read to tolerate before triggering
+int resistanceBounceThreshold = 100; // How much fluctuation in the analog read to tolerate before triggering
 
 // Two-button Simon
 bool simonRead = false; // False when playing a sequence, True when reading input
@@ -60,6 +60,7 @@ unsigned long lastSimon2Bounce = 0;
 String sequence;
 int simonToken = 0;
 int simonPaws = 500;
+int newGameDelay = 1000;
 
 // Utility variables
 unsigned long now;
@@ -67,6 +68,7 @@ int debounceDelay = 50;
 int paws = 250;
 
 void setup() {
+  Serial.begin(9600);
   pinMode( BlinkOut, OUTPUT );
 
   pinMode( MomentaryIn, INPUT );
@@ -88,6 +90,7 @@ void setup() {
   pinMode( SimonIn2, INPUT );
   pinMode( SimonOut1, OUTPUT );
   pinMode( SimonOut2, OUTPUT );
+  newSimon();
 }
 
 void loop() {
@@ -105,4 +108,7 @@ void loop() {
 
   // Simon
   Simon();
+
+  // Don't break stuff
+  delay(10);
 }

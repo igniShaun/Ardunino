@@ -42,4 +42,6 @@ int resistanceBounceThreshold
     digitalWrite( ResistanceOut2, LOW );
   }
   lastResistance2Read = resistance2Read;
+/*  Serial.print("Resistance 1: ");Serial.print(resistance1Read);
+  Serial.print(" Resistance 2: ");Serial.println(resistance2Read);*/
 }

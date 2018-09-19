@@ -30,11 +30,10 @@ Hardware:
 - 5 x breadboard-to-alligator-clip wires
 
 Software functionality:
-- Resistance sensor -- detects resistance between pins, and sends output to corresponding pin (lower resistance-->faster blinking). Similar function to the excellent Makey Makey.
-- Zero -- Detects state of pins and records them for reference -- onboard reset(?)
 - Blink -- One output pin just blinks an LED or buzzer (Blink tutorial)
 - Momentary -- Light turns on when button is pressed, turns off when released (Input tutorial)
 - Toggle -- Pressing button toggles light. (Variable tutorial)
+- Resistance sensor -- detects resistance on two pins (e.g. Can be triggered by touching skin). If there is a change in resistance, turn on corresponding output (Analog tutorial)
 - Simon -- Game where player mimics the blinked pattern.
 - Gopher chase -- Hook multiple kits together, a lit LED will chase around the kits. Pressing the corresponding button when lit catches it, otherwise, gopher speeds up or reverses.
 
