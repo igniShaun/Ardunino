@@ -59,7 +59,7 @@ byte lastSimonIn2Read = 0;
 unsigned long lastSimon2Bounce = 0;
 String sequence;
 int simonToken = 0;
-int simonPaws = 500;
+int simonPaws = 400;
 int newGameDelay = 1000;
 
 // Utility variables

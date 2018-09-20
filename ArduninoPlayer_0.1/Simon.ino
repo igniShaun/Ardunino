@@ -66,6 +66,7 @@ void newSimon() {
   delay(simonPaws);
   sequence = "";
   simonToken = 0;
+  simonPaws = 400;
   // In case they're holding the buttons during the splash, the input won't be recorded
   simonIn1State = 1;
   simonIn2State = 1;
@@ -84,7 +85,7 @@ void simonPressed( int button ) {
   else{ // Incorrect. Lose sequence and reset game.
     digitalWrite( SimonOut1, HIGH );
     digitalWrite( SimonOut2, HIGH );
-    delay(simonPaws * 2);
+    delay(500);
     digitalWrite( SimonOut1, LOW );
     digitalWrite( SimonOut2, LOW );
     delay(simonPaws * 2);
@@ -105,6 +106,8 @@ void simonReleased( int button ){
 void simonPlay() {
   simonRead = false;
   delay(simonPaws);
+  if( sequence.length() % 2 == 0 ) // Speed up every 2
+    simonPaws *= 0.95;
   for ( int i = 0; i < sequence.length(); i++ ) {
     if ( sequence[i] == '1' ) {
       digitalWrite( SimonOut1, HIGH );
