@@ -1,5 +1,5 @@
-# Arduniño
-Arduniño is an Arduino kit for children 6+ that is play first, STEAM education second, with a target price of $6 when purchasing for quantities of 50+.
+# Ardu-niño
+Ardu-niño is an Arduino kit for children 6+ that is play first, STEAM education second, with a target price of $6 when purchasing for quantities of 50+.
 
 Objectives:
 1) Be fun for children.
